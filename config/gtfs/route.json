@@ -4,6 +4,18 @@
     "default_route_long_name_enabled": true,
     "direction_finder_enabled": true,
     "trip_headsign_remove_via": true,
-    "trip_headsign_cleaners": [],
+    "trip_headsign_cleaners": [
+        {
+            "regex": "\\d+\\w? ",
+            "comment": "remove starts w/ RSN (1, 2, 1A, 2B, etc.)"
+        }
+    ],
+    "stop_id_cleanup_regex": "^STOP",
+    "stop_id_previous_char_configs": [
+        {
+            "char": "OD",
+            "id_part": 100000
+        }
+    ],
     "stop_name_cleaners": []
 }
